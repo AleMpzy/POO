@@ -31,7 +31,7 @@ public class Ex8 {
         }
         scanner.close();
     }
-    public static int moda(int[] a) {                          // pesquisei como fazia essa funçao  {
+    public static int moda(int[] a) {                         
         Map<Integer, Integer> frequencia = new HashMap<>();
         int moda = -1;
         int maxFrequencia = 0;
@@ -44,7 +44,7 @@ public class Ex8 {
             }
         }
         return moda;
-    }                                                        // }
+    }                                                        
     public static float mediana(int[] a) {                                  
         Arrays.sort(a);
         int tamanho = a.length;

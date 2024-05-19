@@ -1,0 +1,26 @@
+Ex 3
+
+public class X {
+    private int cont;
+
+    public void setCont(int cont) {
+        this.cont = cont;
+    }
+}
+
+// a. A classe descrita a seguir está correta? Se incorreta justifique sua resposta.
+
+public class Y {
+    public static void main (String[ ] args) {
+        X ob = new X();
+        ob.cont = 10;
+    }
+}
+
+/*  
+    
+    Não esta correta, pois o objeto int cont esta definido como private.
+    Entao para definir algum valor a ele precisamos usar o metodo SET.
+    O correto seria = ob.setCont(10);
+
+*/ 

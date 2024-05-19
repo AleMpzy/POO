@@ -1,0 +1,19 @@
+Ex 5
+
+// O fragmento descrito a seguir está correto? Justifique a sua resposta.
+
+public class X {
+    public int metodo1(int a, int b){
+        ...
+    }
+
+    public String metodo1(int a, int b) {
+        ...
+    }
+}
+
+/* 
+    Esta incorreto pois as assinaturas estao iguais.
+    Para arrumar isso precisamos alterar os tipos de parametros de um dos dois.
+    
+ */

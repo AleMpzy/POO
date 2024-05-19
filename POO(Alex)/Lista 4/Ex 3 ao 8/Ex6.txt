@@ -1,0 +1,6 @@
+Ex 6
+
+Devemos declarar essa variavel como static. 
+
+Ex: 
+    private static int NomeVariavel;

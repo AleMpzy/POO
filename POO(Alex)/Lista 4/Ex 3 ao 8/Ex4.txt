@@ -1,0 +1,42 @@
+Ex 4
+
+public class Test {
+    private int a;
+
+    public Test (int i) {
+        a = i;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getA() {
+        return a;
+    }
+}
+
+/* 
+    Finalize o método na classe UsaTest chamado troca() realizando a troca entre os
+    parâmetros ob1 e ob2. Exiba as informações antes e depois da troca. Por que isso ocorre? 
+*/ 
+
+public class UsaTest {
+    public static void main(String[] args) {
+        Test test1 = new Test(5);
+        Test test2 = new Test(10);
+        System.out.println("Antes da troca");
+        System.out.println("ob1.a = " + test1.getA());
+        System.out.println("ob2.a = " + test2.getA());
+        troca (test1, test2);
+        System.out.println("Depois da troca");
+        System.out.println("ob1.a = " + test1.getA());
+        System.out.println("ob2.a = " + test2.getA());
+    }
+
+    public static void troca(Test ob1, Test ob2) {
+        int aux = ob1.getA();
+        ob1.setA(ob2.getB());
+        ob2.setA(aux);
+    }
+}

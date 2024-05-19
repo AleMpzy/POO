@@ -1,0 +1,6 @@
+Ex 7 
+
+Devemos definir ele como modificador private. 
+
+Ex:
+    private int variavel;

@@ -12,13 +12,13 @@ public class ExSala{
         v.observar();
 
         s.ligar();
-        System.out.println("\nEstado após ligar eletronicos da sala:");
+        System.out.println("\nEstado apos ligar eletronicos da sala:");
         t.observar();
         h.observar();
         v.observar();
 
         s.desligar();
-        System.out.println("\nEstado após desligar eletronicos da sala:");
+        System.out.println("\nEstado apos desligar eletronicos da sala:");
         t.observar();
         h.observar();
         v.observar();

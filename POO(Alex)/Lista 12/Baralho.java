@@ -16,7 +16,7 @@ public class Baralho{
         }
     }
 
-    public void embaralhar(int cortes){
+    public void embaralhar(){
         Random random = new Random();
 
         for(int i = cartas.length - 1; i > 0; i--){

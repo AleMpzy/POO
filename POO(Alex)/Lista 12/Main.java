@@ -1,21 +1,28 @@
 public class Main{
     public static void main(String [] args){
         Baralho baralho = new Baralho();
-        System.out.println("Cartas restantes: " + baralho.cartasRestantes());
 
-        // Embaralha o baralho simulando cortes
-        baralho.embaralhar(3);
+        baralho.embaralhar();
 
-        Card cartaComprada = baralho.comprar();
-        System.out.println("Carta comprada: " + cartaComprada);
-        System.out.println("Cartas restantes: " + baralho.cartasRestantes());
+        Card cartaComprada1 = baralho.comprar();
+        System.out.println("Carta comprada: " + cartaComprada1);
+        
 
         Card cartaComprada2 = baralho.comprar();
         System.out.println("Carta comprada: " + cartaComprada2);
-        System.out.println("Cartas restantes: " + baralho.cartasRestantes());
+        
 
         Card cartaComprada3 = baralho.comprar();
         System.out.println("Carta comprada: " + cartaComprada3);
+        
+
+        Card cartaComprada4 = baralho.comprar();
+        System.out.println("Carta comprada: " + cartaComprada4);
+        
+
+        Card cartaComprada5 = baralho.comprar();
+        System.out.println("Carta comprada: " + cartaComprada5);
+
         System.out.println("Cartas restantes: " + baralho.cartasRestantes());
     }
 }

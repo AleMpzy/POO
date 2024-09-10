@@ -1,0 +1,33 @@
+LISTA DE EXERCÍCIOS – TRATAMENTO DE EXCEÇÕES
+
+1. classe Exception.
+
+2. try{
+    ...
+}
+
+3. O catch pega um tipo de exceção e da ações de tratamento. Define qual código será executado,
+dependendo da exceção gerada.
+
+4. A JVM lança uma exceção, porem não de forma tão clara para o usuário sobre o que pode ser aquele erro.
+
+5. O programa deve capturar e tratar a exceção, usando try e catch.
+
+6. Define um bloco de tratamento de exceção, o try cujo erros são monitorados(que podem gerar exceções), catch é o tratador desses erros, caso aconteçam e o finally (opcional) é sempre executado
+ocorrendo ou não erros dentro do trecho delimitado pela cláusula try.
+
+7. Aqui nesse exemplo temos um catch sem o try.
+
+8. public class Exercicio{
+    public static void main(String[] args){
+        try{
+            int[] vetor = new int[] { 2, 4, 6, 8, 10, 12 };
+            for(int i = 0; i < 12; i++)
+                System.out.println(vetor[i]);
+        }
+
+        catch(ArrayIndexOutOfBoundsException exc){
+            System.out.println("Fim do vetor!");
+        }
+    }
+}

@@ -1,0 +1,52 @@
+LISTA 2 DE EXERCÍCIOS – TRATAMENTO DE EXCEÇÕES
+
+1. Sim.
+
+2. Sim, a cláusula catch de uma superclasse também será
+aplicada a qualquer uma de suas subclasses.
+
+3. Uma exceção gerada dentro do bloco try interno que não for capturada por um catch associado a esse try será
+propagada para o bloco try externo.
+
+4. Sim.
+ 
+5. A instrução throw permite que uma exceção seja lançada ou relançada
+manualmente.
+
+6. Um objeto de exceção derivada
+de Throwable.
+
+7. Sim, com o comando throw, que especifica qual exceção será lançada.
+
+8. No metodo a() sera os dois catch, ja o b() apenas o ultimno.
+
+9. Vai diretamente para o catch, e pode ocorrer ate de não executar o metodo b() dependendo do erro.
+
+10. Sim, pois certos recursos do sistema ou estruturas de dados devem ser liberadas,
+independentemente de sua utilização. Exemplo: fechar um
+arquivo ou conexão com o banco de dados.
+
+11. Exception e Error.
+
+12. Não, usa-se normalmente exceções derivadas de Exception para ter a capacidade de tratar e resolver problemas que o codigo pode enfrentar.
+Error apenas para situações que indicam falhas serias/fatais.
+
+13. 
+    public class ParImpa{
+        public static void main (String args[]){
+            int num;
+            try{
+                num = Integer.parseInt(args[0]);
+                if((num % 2) == 0)
+                    System.out.println("Número par");
+                else
+                    System.out.println("Número impar");
+            }
+            catch(ArrayIndexOutOfBoundsException exc){
+                System.out.println("Indice inexistente!");
+            }
+            catch(NumberFormatException e){
+                System.out.println("O argumento fornecido não eh um numero valido.");
+            }
+        }
+    }

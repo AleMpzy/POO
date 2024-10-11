@@ -9,6 +9,6 @@ public class Aluno extends Pessoa implements Falante{
     }
 
     public void identificarSe(){
-        System.out.println("Eu sou o aluno " + nome() + " e estou atualmente com " + idade() + " anos de idade");
+        System.out.println("Eu sou o aluno " + getNome() + " e estou atualmente com " + getIdade() + " anos de idade");
     }
 }

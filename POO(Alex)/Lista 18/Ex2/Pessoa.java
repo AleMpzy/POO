@@ -1,9 +1,9 @@
 public class Pessoa{
-    public String nome(){
+    private String nome(){
         return "Alex Eduardo";
     }
 
-    public int idade(){
+    private int idade(){
         return 19;
     }
 

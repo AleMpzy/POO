@@ -1,6 +1,10 @@
 public class ServicoEletrico extends Servico{
-    public ServicoEletrico(Veiculo veiculo) {
-        super(veiculo);
+    public ServicoEletrico(double preco){
+        super(preco);
     }
-    
+
+    @Override
+    public double getPreco(){
+        return preco * 1.5;
+    }
 }

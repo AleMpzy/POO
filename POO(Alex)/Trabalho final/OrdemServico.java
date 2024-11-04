@@ -1,26 +1,55 @@
+import java.util.List;
+import java.util.ArrayList;
+
 enum StatusOrdemServico{
     AGUARDANDO, EM_ANDAMENTO, FINALIZADO
 }
 
 public class OrdemServico implements Reparavel{
-    private OrdemServico ordemServico[];
-    private Servico servico;
+    private Veiculo veiculo;
+    private List<Servico> servicos;
+    private StatusOrdemServico status;
 
-    public OrdemServico(Servico servico){
-        this.servico = servico;
+    public OrdemServico(Veiculo veiculo){
+        this.veiculo = veiculo;
+        this.servicos = new ArrayList<>();
+        this.status = StatusOrdemServico.AGUARDANDO;
+        System.out.println("Servico na fila de espera.");
     }
 
-    public Servico getServico(){
-        return servico;
+    public Veiculo getVeiculo(){
+        return veiculo;
     }
 
-    public void setServico(Servico servico){
-        this.servico = servico;
+    public List<Servico> getServicos(){
+        return servicos;
     }
 
-    @Override
-    public void reparar(){
-        
+    public StatusOrdemServico getStatus(){
+        return status;
+    }
+
+    public void adicionarServico(Servico servico){
+        servicos.add(servico);
+    }
+
+    public double calcularCustoTotal(){
+        double total = 0.0;
+        for(Servico servico : servicos){
+            total += servico.getPreco();
+        }
+        return total;
     }
     
+    @Override
+    public void reparar(){
+        System.out.println("Servico da vez:");
+        System.out.println("" + veiculo);
+
+        status = StatusOrdemServico.EM_ANDAMENTO;
+        System.out.println("Reparando...");
+        
+        status = StatusOrdemServico.FINALIZADO;
+        System.out.println("Finalizado!");
+    }
 }

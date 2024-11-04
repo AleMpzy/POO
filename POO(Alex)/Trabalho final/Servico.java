@@ -1,15 +1,11 @@
 public class Servico{
-    private Veiculo veiculo;
+    protected double preco;
 
-    public Servico(Veiculo veiculo){
-        this.veiculo = veiculo;
+    public Servico(double preco){
+        this.preco = preco;
     }
-
-    public Veiculo getVeiculo(){
-        return veiculo;
-    }
-
-    public void setVeiculo(Veiculo veiculo){
-        this.veiculo = veiculo;
+    
+    public double getPreco(){
+        return preco;
     }
 }

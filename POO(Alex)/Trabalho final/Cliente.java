@@ -1,8 +1,24 @@
-public class Cliente{
-    private Cliente clientes[];
-    private Veiculo veiculo;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Cliente(Veiculo veiculo){
-        this.veiculo = veiculo;
+public class Cliente{
+    private String nome;
+    private List<Veiculo> veiculos;
+
+    public Cliente(String nome){
+        this.nome = nome;
+        this.veiculos = new ArrayList<>();
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public List<Veiculo> getVeiculos(){
+        return veiculos;
+    }
+
+    public void adicionarVeiculo(Veiculo veiculo){
+        this.veiculos.add(veiculo);
     }
 }

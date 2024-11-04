@@ -14,7 +14,6 @@ public class OrdemServico implements Reparavel{
         this.veiculo = veiculo;
         this.servicos = new ArrayList<>();
         this.status = StatusOrdemServico.AGUARDANDO;
-        System.out.println("Servico na fila de espera.");
     }
 
     public Veiculo getVeiculo(){

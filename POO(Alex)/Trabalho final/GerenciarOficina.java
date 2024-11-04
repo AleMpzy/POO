@@ -50,7 +50,7 @@ public class GerenciarOficina{
                         try{
                             oficina.criarOrdemServico(cliente, veiculo);
                             System.out.println("Ordem de servico criada com sucesso!");
-                        } catch (VeiculoNaoEncontradoException e) {
+                        } catch(VeiculoNaoEncontradoException e){
                             System.out.println("Erro: " + e.getMessage());
                         }
                     }
@@ -93,11 +93,11 @@ public class GerenciarOficina{
                 case 5:
                     System.out.print("Digite o nome do cliente para buscar ordens de serviço: ");
                     String nomeClienteBusca = scanner.nextLine();
-                    Cliente clienteBusca = oficina.getClientes().stream().filter(c -> c.getNome().equalsIgnoreCase(nomeClienteBusca)).findFirst().orElse(null); //
+                    Cliente clienteBusca = oficina.getClientes().stream().filter(c -> c.getNome().equalsIgnoreCase(nomeClienteBusca)).findFirst().orElse(null); // busca o primeiro cliente que tenha o nome igual a nomeClienteBusca(variavel)
 
                     if(clienteBusca == null){
                         System.out.println("Cliente nao encontrado.");
-                    } else {
+                    } else{
                         List<OrdemServico> ordensCliente = oficina.buscarServicosPorCliente(clienteBusca);
                         if(ordensCliente == null || ordensCliente.isEmpty()) 
                             System.out.println("Nenhuma ordem de servico encontrada para este cliente.");

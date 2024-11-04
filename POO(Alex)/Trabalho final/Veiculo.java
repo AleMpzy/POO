@@ -14,9 +14,4 @@ public class Veiculo{
     public int getAno(){
         return ano;
     }
-
-    @Override
-    public String toString(){
-        return " Modelo: " + modelo + " Ano:" + ano;
-    }
 }

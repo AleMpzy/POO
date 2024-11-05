@@ -25,6 +25,10 @@ public class GerenciarOficina{
 
             switch(op){
                 case 1:
+                    boolean ordensPendentes = oficina.buscarOrdensPorStatus(StatusOrdemServico.AGUARDANDO).size() > 0|| oficina.buscarOrdensPorStatus(StatusOrdemServico.EM_ANDAMENTO).size() > 0; // verifica se tem alguma ordem nao finalizada
+                    if(ordensPendentes) 
+                        System.out.println("Nao e possivel cadastrar novo cliente ou veiculo enquanto houver ordens de servico nao finalizadas.");
+                    else{
                     System.out.print("Digite o nome do cliente: ");
                     String nome = scanner.nextLine();
                     cliente = new Cliente(nome);
@@ -41,6 +45,7 @@ public class GerenciarOficina{
                     oficina.cadastrarCliente(cliente);
 
                     System.out.println("Cliente e veiculo cadastrados com sucesso!");
+                    }
                     break;
 
                 case 2:
@@ -95,9 +100,9 @@ public class GerenciarOficina{
                     String nomeClienteBusca = scanner.nextLine();
                     Cliente clienteBusca = oficina.getClientes().stream().filter(c -> c.getNome().equalsIgnoreCase(nomeClienteBusca)).findFirst().orElse(null); // busca o primeiro cliente que tenha o nome igual a nomeClienteBusca(variavel)
 
-                    if(clienteBusca == null){
+                    if(clienteBusca == null)
                         System.out.println("Cliente nao encontrado.");
-                    } else{
+                    else{
                         List<OrdemServico> ordensCliente = oficina.buscarServicosPorCliente(clienteBusca);
                         if(ordensCliente == null || ordensCliente.isEmpty()) 
                             System.out.println("Nenhuma ordem de servico encontrada para este cliente.");
